@@ -18,7 +18,7 @@ body {
 
 #root {
   transition: background-color 500ms ease;
-  background: lightblue;
+  /* background: lightblue; */
   position: fixed;
   overflow: hidden;
   width: 100%;

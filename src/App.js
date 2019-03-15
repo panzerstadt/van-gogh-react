@@ -11,7 +11,7 @@ function importFolder(r) {
 // prepare bg images
 
 let images = importFolder(require.context("./imgs", true, /.*\.jpg$/));
-const cards = images;
+const cards = images.reverse();
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({
@@ -43,19 +43,18 @@ function Deck() {
       });
 
       const colors = await Promise.all(promises);
-      console.log(colors);
       setDomClr(colors);
     };
 
     getColors();
   }, [cards]);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(cards.length - 1);
   useEffect(() => {
     // change bg color (affects the outside)
     const r = document.getElementById("root");
     r.style.backgroundColor = domClr[currentIndex];
-  }, [currentIndex]);
+  }, [currentIndex, domClr]);
 
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useGesture(
@@ -71,7 +70,9 @@ function Deck() {
       const trigger = velocity > 0.2; // If you flick hard enough it should trigger the card to fly out
 
       if (!down && trigger) {
-        setCurrentIndex(index - 1);
+        let newIndex = index - 1;
+        if (newIndex < 0) newIndex = cards.length - 1;
+        setCurrentIndex(newIndex);
         // because this bind action is done during first render (and it's only rendered once)
         // it will not know the state of the updated domClr
         // therefore we have to bind it outside

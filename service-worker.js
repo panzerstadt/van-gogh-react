@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/van-gogh-react/precache-manifest.249485e87cbe5e9620ee02450c1f1be8.js"
+  "/van-gogh-react/precache-manifest.b62f3f92db4dd54d807599cd7bbcf46a.js"
 );
 
 workbox.clientsClaim();

@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/van-gogh-react/static/media/vg_3.1311d7c7.jpg"
   },
   {
-    "revision": "978b7aeaa755a42b2fc9",
-    "url": "/van-gogh-react/static/css/main.276b0e72.chunk.css"
+    "revision": "970ec33296df910691ea",
+    "url": "/van-gogh-react/static/css/main.9cb62ec0.chunk.css"
   },
   {
     "revision": "54e378e15a3bff484b7c",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/van-gogh-react/static/media/vg_2.73c0a678.jpg"
   },
   {
-    "revision": "978b7aeaa755a42b2fc9",
-    "url": "/van-gogh-react/static/js/main.1e5256b0.chunk.js"
+    "revision": "970ec33296df910691ea",
+    "url": "/van-gogh-react/static/js/main.da96833d.chunk.js"
   },
   {
     "revision": "e65e888b245ae682bb994fe799b8b923",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/van-gogh-react/static/media/vg_9.21e67d68.jpg"
   },
   {
-    "revision": "c8b823cc0f2cdcb25be947a6825c9738",
+    "revision": "0a17a515d3c24e9bffaa62f598e4b4fb",
     "url": "/van-gogh-react/index.html"
   }
 ];
